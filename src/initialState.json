@@ -1,0 +1,18 @@
+{ 
+  "step":1,
+  "links":{
+    "pstr":"/pstr",
+    "pltr":"/pltr",
+    "outage":"/outage",
+    "status":"/status",
+    "sltr":"/sltr"
+  },
+  "reportType":"Phone",
+  "address" :
+      {
+        "line1":"1234 Main St",
+        "line2":"Apt 102",
+        "city":"Detroit",
+        "zipcode":"12345"
+      }
+}

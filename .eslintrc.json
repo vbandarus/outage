@@ -1,0 +1,29 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "impliedStrict": true,
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "jquery": true,
+    "node": true,
+    "jest": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "extends": [],
+  "rules": {
+    "react/no-multi-comp": ["error", { "ignoreStateless": true }]
+  },
+  "globals": {
+    "parsePhone": true,
+    "DP_APP": true,
+    "DP_API_HOST": true,
+    "DP_NODE_ENV": true
+  }
+}
