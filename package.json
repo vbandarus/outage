@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bphani5/web-outage.git"
+    "url": "git+https://github.com/bphani5/outage.git"
   },
   "author": "Phaneendra B",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bphani5/web-outage/issues"
+    "url": "https://github.com/bphani5/outage/issues"
   },
   "dependencies": {
     "prop-types": "^15.6.0",
