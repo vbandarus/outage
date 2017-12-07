@@ -11,8 +11,8 @@ export const reportType = (state = {}, action) => {
 }
 export const address = (state = {}, action) => {
   switch (action.type) {
-    case C.REQUEST_SITES_BY_ADDRESS: return Object.assign({}, state,address: action.payload.address, step: action.payload.step)
-    case "RESET_STATE": return Object.assign({}, state, address: {})
+    case C.REQUEST_SITES_BY_ADDRESS: return Object.assign({}, state,{address: action.payload.address, step: action.payload.step})
+    case "RESET_STATE": return Object.assign({}, state, {address: {}})
     default: return state
   }
 }
