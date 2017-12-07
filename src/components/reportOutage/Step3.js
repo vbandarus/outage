@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import C from '../../constants.js'
 import rootReducer from '../../reducers'
-import { selectOutageType } from '../../actions.js'
+import { stepChange, selectOutageType } from '../../actions.js'
 
 class Step3 extends Component {
 	constructor(props) {

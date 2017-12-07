@@ -50,7 +50,7 @@ class contactInfoClass extends Component {
 
           </div>
 
-          <div className="PADDL20PX"><label htmlFor="contactPhone" className="formLabel font-regular">Last Name</label>
+          <div className="PADDL20PX"><label htmlFor="contactPhone" className="formLabel font-regular">Phone Number</label>
             <input type="text" name="contactPhone" size="10" onChange={this.handleChange} id="contactPhone" />
           </div>
           <div className="col"><button>Submit</button></div>
