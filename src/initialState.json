@@ -14,5 +14,6 @@
         "line2":"Apt 102",
         "city":"Detroit",
         "zipcode":"12345"
-      }
+      },
+  "outageType":"powerOut"
 }
