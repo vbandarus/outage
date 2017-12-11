@@ -6,7 +6,8 @@ import {  HashRouter,
   Link,
   Switch,
   Redirect,
-  BrowserRouter} from 'react-router-dom'
+  BrowserRouter,
+Router} from 'react-router-dom'
 import ReportOutage from './components/ReportOutage'
 import {Pstr} from './components/Pstr'
 import {Pltr} from './components/Pltr'

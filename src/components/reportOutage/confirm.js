@@ -28,7 +28,12 @@ class confirm extends Component {
     } = this.props.appState
 
         return (
-            <div>
+            <div className="container-fluid PADD20PX">
+            <div className="center-950px-block">
+            <div className="row">
+          <div className="section_title col"><span>Report Outage</span></div>
+        </div>
+            <div className="PADDBOX dte-white-bkg">
                 <div>Confirmation Screen</div>
                 <div>Thank you for Submitting your outage<br />
                     We'll reach you as soon as possible
@@ -41,6 +46,8 @@ class confirm extends Component {
                 </div>
 
                 <a href="/">Go to Outage Center</a>
+            </div>
+            </div>
             </div>
         )
     }

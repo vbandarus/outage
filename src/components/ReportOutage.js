@@ -9,6 +9,7 @@ import ContactInfo from './reportOutage/ContactInfo'
 import Confirm from './reportOutage/confirm'
 import Questions from './reportOutage/Questions'
 import { getState } from '../actions.js'
+import * as dteUI from '../stylesheets/outage.css'
 
 class ReportOutage extends Component {
   constructor(props) {
@@ -16,7 +17,6 @@ class ReportOutage extends Component {
   }
 
   render() {
-    //store is in window so accessible dont do it
     const { step } = this.props
     console.log("this is from ReportOutage ", step)
     switch (step) {

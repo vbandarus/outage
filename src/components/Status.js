@@ -29,7 +29,6 @@ submit(event){
 
 render(){
   const {step} = this.props
-  console.log('##step '+step)
     return (
       <div className="container-fluid PADD20PX">      
       <div className="row">

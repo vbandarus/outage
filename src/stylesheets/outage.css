@@ -1,3 +1,12 @@
+#exTab3 .nav-pills > li > a {
+    border-radius: 4px 4px 0 0 ;
+  }
+  
+  #exTab3 .tab-content {
+    color : white;
+    background-color: #428bca;
+    padding : 5px 15px;
+  }
 .show {
   display: block !important;
 }
@@ -526,4 +535,67 @@ label.heading {
     .megaNav-fw {
         min-width: 245px;
     }
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #ddd;
+    background-color: #E8E8E8;
+    
+}
+.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    color: #00aeef;
+    font-size: 14px;
+    border: 1px solid #00AEEF;
+    list-style: none;
+    background-color: transparent;
+}
+.nav-pills>div.active,.nav-pills>div.active>a, .nav-pills>div.active:focus>a, .nav-pills>div.active:hover>a {
+    color: #fff;
+    cursor: default;
+    background-color: #00AEEF;
+    border-bottom-color: transparent;
+}
+
+.nav-pills {
+    background-color: #fff;
+    text-align:center;
+    border: 1px solid #00AEEF;
+    border-radius: 3px;
+}
+.nav-pills>div {
+    font-size: 16px;
+    color:#00AEEF;
+    height: 45px;
+    padding: 5px;
+}
+
+div.headerCancel {
+    position: absolute;
+    margin: 30px 0;
+    right: 40px;
+}
+.button.cancel, button.cancel {
+    border: solid 1px #fff;
+    background: none;
+    color: #fff;
+    font-size: 22px;
+    width: 125px;
+    max-height: 46px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.PADD0{
+padding: 0 !important;
+}
+input[type="text"] {
+    width: 310px;
+    height: 33px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.center-950px-block{
+    width: 950px;
+    margin: 0 auto;
 }

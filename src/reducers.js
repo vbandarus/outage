@@ -2,17 +2,17 @@ import { combineReducers } from 'redux'
 
 import C from './constants'
 
-export const reportType = (state = {}, action) => {
+export const reportType = (reportType="addressReport", action) => {
   if (action.type == C.CLICK_REPORT_TYPE) {
     return action.payload.reportType
   } else {
-    return state
+    return reportType
   }
 }
-export const address = (state = {}, action) => {
+export const addressSuggestions = (state = {}, action) => {
   switch (action.type) {
-    case C.REQUEST_SITES_BY_ADDRESS: return Object.assign({}, state, { address: action.payload.address, step: action.payload.step })
-    case C.RESET_STATE: return Object.assign({}, state, { address: {} })
+    case C.REQUEST_SITES_BY_ADDRESS: return Object.assign({}, state,  action.payload.addressSuggestions )
+    case C.RESET_STATE: return Object.assign({}, state, { address: [] })
     default: return state
   }
 }
@@ -20,13 +20,13 @@ export const address = (state = {}, action) => {
 export const step = (step = 1, action) => {
   switch (action.type) {
     case C.INCREMENT_STEP: return action.payload
-    case C.CLICK_REPORT_TYPE: return action.payload.step
     case C.DECREMENT_STEP: return action.payload
     case C.SUBMIT_OUTAGE: return action.payload.step
     case C.RESET_STATE: return 1
     case C.REQUEST_SITES_BY_ADDRESS: return action.payload.step
     case C.OUTAGE_TYPE: return action.payload.step
     case C.CONTACT_INFO: return action.step
+    // case C.CLICK_REPORT_TYPE: return action.payload.step
     // case C.OUTAGETYPE_SUBMIT: return action.step
     default: return step
   }
@@ -35,7 +35,11 @@ export const step = (step = 1, action) => {
 export function parsedAddress(state = {
   addressLine1: '',
   addressLine2: '',
+  addressLine3: '',
+  city:'',
+  state:'Michigan',
   zipcode: '',
+  phoneNumber:'',
   showError: false
 }, action) {
   switch (action.type) {
@@ -126,7 +130,7 @@ export const contactInfo = (state = {}, action) => {
 
 const rootReducer = combineReducers({
   reportType,
-  address,
+  addressSuggestions,
   parsedAddress,
   contactInfo,
   step,
