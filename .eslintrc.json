@@ -16,9 +16,10 @@
   "plugins": [
     "react"
   ],
-  "extends": [],
+  "extends": ["standard", "standard-react"],
   "rules": {
-    "react/no-multi-comp": ["error", { "ignoreStateless": true }]
+    "react/no-multi-comp": ["error", { "ignoreStateless": true }],
+    "jsx-quotes": ["error", "prefer-double"]
   },
   "globals": {
     "parsePhone": true,

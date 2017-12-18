@@ -13,8 +13,9 @@ module.exports = {
 		publicPath: "assets"
 	},
 	devServer: {
-		inline: true,
-		contentBase: BUILD_DIR,
+    inline: true,
+    historyApiFallback: true,
+    contentBase: BUILD_DIR,
 		port: 3000
 	},
 	module: {

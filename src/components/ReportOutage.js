@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import ReportBy from './reportOutage/Step1.js'
 import PremiseLookUp from './reportOutage/Step2.js'
 import OutageType from './reportOutage/Step3.js'
+import DuplicateOutage from './reportOutage/updateContactInfo'
 import Verify from './reportOutage/Verify'
 import ContactInfo from './reportOutage/ContactInfo'
 import Confirm from './reportOutage/confirm'
@@ -23,6 +24,7 @@ class ReportOutage extends Component {
       case 1: return <ReportBy />
       case 2: return <PremiseLookUp />
       case 3: return <ContactInfo />
+      case 31: return <DuplicateOutage/>
       case 4: return <OutageType />
       case 5: return <Questions />
       case 6: return <Verify />

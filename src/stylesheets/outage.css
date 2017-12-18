@@ -1,7 +1,15 @@
 #exTab3 .nav-pills > li > a {
     border-radius: 4px 4px 0 0 ;
-  }
-  
+}
+
+.nav.nav-pills>div>a {
+    vertical-align: sub;
+}
+
+.centerTab {
+    border-right: 1px solid;
+    border-left: 1px solid;
+}
   #exTab3 .tab-content {
     color : white;
     background-color: #428bca;
@@ -61,6 +69,9 @@ a {
 .container-fluid {
     padding-left: 0px;
     padding-right: 0px;
+}
+.grid-950px {
+    max-width: 950px;
 }
 .nav_home_img {
     width: 224px;
@@ -177,7 +188,7 @@ h5 {
 /*Middle Section Outage Start*/
 
 .section_title {
-    width: 950px;
+    /* width: 950px; */
     text-align: center;
     border-bottom: 1px solid #808284;
     line-height: 0.7em;
@@ -193,7 +204,7 @@ h5 {
 .errorOutage {
     padding-left: 20px;
     padding-right: 20px;
-    width: 950px;
+    /* width: 950px; */
     margin: 0px auto;
     font-weight: 600;
     color: #FF0000;
@@ -236,7 +247,7 @@ h5 {
 .PADDL20PX {
     padding-left: 20px;
 }
-. .PADDL23PX {
+.PADDL23PX {
     padding-left: 23px;
 }
 .PADDR20PX {
@@ -516,7 +527,7 @@ label.heading {
     border: none;
 }
 .middle_section {
-    width: 950px;
+    /* width: 950px; */
     margin: 0px auto;
     padding-bottom: 50px;
 }
@@ -590,12 +601,12 @@ div.headerCancel {
 padding: 0 !important;
 }
 input[type="text"] {
-    width: 310px;
+    /* width: 310px; */
     height: 33px;
     margin-top: 10px;
     margin-bottom: 20px;
 }
 .center-950px-block{
-    width: 950px;
+    /* width: 950px; */
     margin: 0 auto;
 }

@@ -9,11 +9,33 @@ export const reportType = (reportType="addressReport", action) => {
     return reportType
   }
 }
-export const addressSuggestions = (state = {}, action) => {
+export const statusLookUp = (statusLookUp="addressLookup", action) => {
+  console.log("status look up ",action.payload)
+  if (action.type == C.SELECT_STATUS_LOOKUP) {
+    return action.payload
+  } else {
+    return statusLookUp
+  }
+}
+export const addressSuggestions = (addressSuggestions = [], action) => {
   switch (action.type) {
-    case C.REQUEST_SITES_BY_ADDRESS: return Object.assign({}, state,  action.payload.addressSuggestions )
+    case C.REQUEST_SITES_BY_ADDRESS: return  action.payload.addressSuggestions
     case C.RESET_STATE: return Object.assign({}, state, { address: [] })
-    default: return state
+    default: return addressSuggestions
+  }
+}
+
+export const isDuplicate = (isDuplicate = false, action) => {
+  switch (action.type) {
+    case C.DUPLICATE_OUTAGE: return action.payload
+    default: return isDuplicate
+  }
+}
+
+export const isDNP = (isDNP = false, action) => {
+  switch (action.type) {
+    case C.DNP_FLAG: return action.payload
+    default: return isDNP
   }
 }
 
@@ -130,8 +152,11 @@ export const contactInfo = (state = {}, action) => {
 
 const rootReducer = combineReducers({
   reportType,
+  statusLookUp,
   addressSuggestions,
   parsedAddress,
+  isDuplicate,
+  isDNP,
   contactInfo,
   step,
   links,

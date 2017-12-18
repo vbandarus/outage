@@ -12,7 +12,7 @@ import ReportOutage from './components/ReportOutage'
 import {Pstr} from './components/Pstr'
 import {Pltr} from './components/Pltr'
 import OutageCenter from './components/OutageCenter'
-import Status from './components/Status'
+import StatusLookUp from './components/StatusLookUp'
 import { NoPage404 } from './components/NoPage404.js'
 
 class Routes extends Component {
@@ -24,11 +24,11 @@ class Routes extends Component {
       <BrowserRouter>
       <div>
       <Switch>
-            <Route   exact path='/' component={OutageCenter}/>
             <Route    path='/outage' component ={ReportOutage}/>
             <Route    path='/pltr' component={Pltr} />
             <Route    path='/pstr' component={Pstr} />
->           <Route    path='/status' component={Status} />
+>           <Route    path='/status' component={StatusLookUp} />
+            <Route    path='/' component={OutageCenter}/>
             <Route component={NoPage404}/>
       </Switch>    
       </div>

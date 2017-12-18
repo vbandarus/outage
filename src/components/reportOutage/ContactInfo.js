@@ -2,20 +2,20 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import C from '../../constants.js'
 // import rootReducer, { reportOutage, reportType } from '../../reducers'
-import { stepChange, parseAddress, addressLookup, contactInfo ,decrementStep } from '../../actions.js'
+import { stepChange, parseAddress, addressLookup, contactInfo, decrementStep } from '../../actions.js'
 
 class contactInfoClass extends Component {
   constructor(props) {
     super(props)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
-		this.stepBack = this.stepBack.bind(this)
-	}
-	stepBack(e) {
-		e.preventDefault()
-		console.log("reduce step by 1")
-		this.props.dispatch(decrementStep(this.props.step))
-	}
+    this.stepBack = this.stepBack.bind(this)
+  }
+  stepBack(e) {
+    e.preventDefault()
+    console.log("reduce step by 1")
+    this.props.dispatch(decrementStep(this.props.step))
+  }
   handleSubmit(e) {
     const { step } = this.props
     console.log("click values are ", e.target)
@@ -46,16 +46,20 @@ class contactInfoClass extends Component {
               <div>We may need to reach you regarding your power problem.Please provide your contact information below:</div>
               <div>Reporting outage for the below address</div>
               <div>Address: {addressLine1} {addressLine2} {zipcode} {phoneNumber}</div>
-              <div className="PADDL20PX">
+              <div className="row"><div className="PADDL20PX col-xs-12 col-md-offset-3 col-md-6">
                 <label htmlFor="firstName" className="formLabel font-regular">
-                  First Name</label>
+                  First Name
                 <input type="text" name="firstName" size="30" onChange={this.handleChange} id="firstName" />
+                </label>
               </div>
-              <div className="PADDL20PX"><label htmlFor="lastName" className="formLabel font-regular">Last Name</label>
-                <input type="text" name="lastName" size="30" onChange={this.handleChange} id="lastName" />
               </div>
-              <div className="PADDL20PX"><label htmlFor="contactPhone" className="formLabel font-regular">Phone Number</label>
-                <input type="text" name="contactPhone" size="10" onChange={this.handleChange} id="contactPhone" />
+              <div className="row"><div className="PADDL20PX col-xs-12 col-md-offset-3 col-md-6"><label htmlFor="lastName" className="formLabel font-regular">Last Name
+                <input type="text" name="lastName" size="30" onChange={this.handleChange} id="lastName" /></label>
+              </div>
+              </div>
+              <div className="row"><div className="PADDL20PX col-xs-12 col-md-offset-3 col-md-6"><label htmlFor="contactPhone" className="formLabel font-regular">Phone Number
+                <input type="text" name="contactPhone" size="10" onChange={this.handleChange} id="contactPhone" /></label>
+              </div>
               </div>
             </div>
             <div className="row PADDBOX">

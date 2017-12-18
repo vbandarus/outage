@@ -8,6 +8,13 @@ export function selectReportType(reportType = "addressReport") {
   }
 }
 
+export function selectStatusLookUp(statusType = "addressReport") {
+  return {
+    type: C.SELECT_STATUS_LOOKUP,
+    payload: statusType
+  }
+}
+
 export function decrementStep(step){
   console.log(step," step in decrement")
   step = step>1?step - 1:1
@@ -25,7 +32,7 @@ export function incrementStep(step){
   }
 }
 
-export function addressLookup(addressSuggestions={}, step) {
+export function addressLookup(addressSuggestions=[], step) {
   step = step + 1
   console.log(addressSuggestions)
   return {
@@ -35,6 +42,20 @@ export function addressLookup(addressSuggestions={}, step) {
         addressSuggestions,
         step
       }
+  }
+}
+
+export function isDuplicate(isDuplicate=false) {
+  return {
+    type: C.DUPLICATE_OUTAGE,
+    payload: isDuplicate
+  }
+}
+
+export function isDNP(isDNP=false) {
+  return {
+    type: C.DNP_FLAG,
+    payload: isDNP
   }
 }
 
